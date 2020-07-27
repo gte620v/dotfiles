@@ -129,10 +129,6 @@ fi
 #pip3 install joe 2> /dev/null
 #linkdotfile .noserc
 
-# install some R packages
-gecho "installing basic R and Bioconductor packages..." >&2
-Rscript ~/dotfiles/install_rpkgs.r
-
 yecho "run the following to change shell to zsh... :" >&2
 echo "  chsh -s /bin/zsh "
 

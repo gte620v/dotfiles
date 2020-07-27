@@ -17,4 +17,7 @@ ipython-profile-default/.ipynb_checkpoints/
 ipython-profile-default/.ropeproject/
 .config/inkscape/
 .config/htop/
+.config/nvim/plugged
+.config/nvim/.netrwhist
+.config/nvim/autoload/plug.vim.old
 .config/gtk-2.0/
