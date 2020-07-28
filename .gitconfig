@@ -1,13 +1,12 @@
 [user]
-	name = Vince Buffalo
-	email = vsbuffaloAAAAAA@gmail.com
+	name = Bob Baxley
+	email = bob.baxley@gmail.com
 [credential]
 	help = osxkeychain
 [push]
 	default = simple
 [core]
 	editor = vim
-	excludesfile = /Users/vinceb/.global_ignore
 [color]
 	ui = true
 [alias]
@@ -26,6 +25,6 @@
 	smudge = git hawser smudge %f
 	required = true
 [github]
-	user = vsbuffalo
+	user = gte620v
 [diff "nb2md"]
 	textconv = nb2md

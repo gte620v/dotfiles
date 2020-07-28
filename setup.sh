@@ -31,13 +31,13 @@ function recho {
 
 # check for pre-req, fail if not found
 function check_preq {
-  (command -v $1 > /dev/null  && gecho "$1 found...") || 
+  (command -v $1 > /dev/null  && gecho "$1 found...") ||
     recho "$1 not found, install before proceeding."
 }
 
 # look for command line tool, if not install via homebrew
 function install_brew {
-  (command -v $1 > /dev/null  && gecho "$1 found...") || 
+  (command -v $1 > /dev/null  && gecho "$1 found...") ||
     (yecho "$1 not found, installing via homebrew..." && brew install $1)
 }
 
@@ -53,7 +53,7 @@ function linkdotfile {
 }
 
 # are we in right directory?
-[[ $(basename $(pwd)) == "dotfiles" ]] || 
+[[ $(basename $(pwd)) == "dotfiles" ]] ||
   recho "doesn't look like you're in dotfiles/"
 
 # check that the key pre-requisites are met:
@@ -72,15 +72,6 @@ install_brew libgit2
 
 yecho "linking prezto files..." >&2
 zsh install_prezto.zsh
-
-# installing futurama quotes
-if [ ! -e ~/.futurama ]; then
-  yecho ".futurama not found, downloading..." >&2
-  curl -s https://raw.githubusercontent.com/vsbuffalo/good-news-everyone/master/futurama.txt 2> /dev/null | \
-    awk '{print $0} END{print "total quotes: "NR > "/dev/stderr"}' > ~/.futurama
-else
-  gecho ".futurama found, ignoring..." >&2
-fi
 
 # link over .gitconfig
 linkdotfile .gitconfig
@@ -117,7 +108,7 @@ if [ ! -e ~/.global_ignore ]; then
       https://raw.githubusercontent.com/github/gitignore/master/Global/Vim.gitignore \
       https://raw.githubusercontent.com/github/gitignore/master/Global/macOS.gitignore \
     > ~/.global_ignore 2> /dev/null
-    git config --global core.excludesfile ~/.global_ignore && 
+    git config --global core.excludesfile ~/.global_ignore &&
       yecho "[message] adding ignore file to Git..." >&2
 else
     gecho "~/.global_ignore found, ignoring..." >&2
@@ -132,4 +123,8 @@ fi
 yecho "run the following to change shell to zsh... :" >&2
 echo "  chsh -s /bin/zsh "
 
+brew install wget
+
+# wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
+# bash ~/miniconda.sh -b -p $HOME/opt/miniconda
 
