@@ -411,5 +411,6 @@ autocmd FileType yml set ts=2 sts=2 sw=2 expandtab
 set nomodeline
 
 set expandtab
+set list
 
 let g:python3_host_prog='/Users/bob/opt/anaconda3'

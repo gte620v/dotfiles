@@ -7,7 +7,7 @@ fi
 ## theme ##
 autoload -Uz promptinit
 promptinit
-prompt steeef
+prompt giddie
 
 ## set history size ##
 HISTSIZE=100000
