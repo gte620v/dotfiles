@@ -1,0 +1,9 @@
+{
+  "NotebookApp": {
+    "nbserver_extensions": {
+      "jupyterlab_black": true,
+      "jupyterlab_code_formatter": true
+    },
+    "password": "sha1:a4b11c8d6f08:62765ff3dadee59f42b1884f0fcb1a156e021619"
+  }
+}
