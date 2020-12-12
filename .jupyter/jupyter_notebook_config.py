@@ -1,4 +1,5 @@
 # Configuration file for jupyter-notebook.
+from os.path import expanduser
 
 # ------------------------------------------------------------------------------
 # Application(SingletonConfigurable) configuration
@@ -99,7 +100,7 @@
 # c.NotebookApp.browser = ''
 
 ## The full path to an SSL/TLS certificate file.
-c.NotebookApp.certfile = "/home/bob/.jupyter/mycert.pem"
+c.NotebookApp.certfile = expanduser("~/.jupyter/mycert.pem")
 
 ## The full path to a certificate authority certificate for SSL/TLS client
 #  authentication.
@@ -220,7 +221,7 @@ c.NotebookApp.certfile = "/home/bob/.jupyter/mycert.pem"
 # c.NotebookApp.kernel_spec_manager_class = 'jupyter_client.kernelspec.KernelSpecManager'
 
 ## The full path to a private key file for usage with SSL/TLS.
-c.NotebookApp.keyfile = "/home/bob/.jupyter/mykey.key"
+c.NotebookApp.keyfile = expanduser("~/.jupyter/mykey.key")
 
 ## Hostnames to allow as local when allow_remote_access is False.
 #
