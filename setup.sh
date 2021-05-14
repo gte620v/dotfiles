@@ -58,6 +58,7 @@ function linkdotfile {
 
 # check that the key pre-requisites are met:
 check_preq gcc
+#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 check_preq brew
 check_preq "command -v ~/anaconda/bin/conda"
 
@@ -70,8 +71,12 @@ install_brew lesspipe
 install_brew joe
 install_brew libgit2
 
+
 yecho "linking prezto files..." >&2
 zsh install_prezto.zsh
+
+
+linkdotfile .jupyter
 
 # link over .gitconfig
 linkdotfile .gitconfig
@@ -125,8 +130,8 @@ echo "  chsh -s /bin/zsh "
 
 brew install wget
 
-# wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
-# bash ~/miniconda.sh -b -p $HOME/opt/miniconda
+#wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
+#bash ~/miniconda.sh -b -p $HOME/opt/miniconda
 
 # clone
 git clone https://github.com/powerline/fonts.git --depth=1

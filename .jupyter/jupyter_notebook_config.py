@@ -100,7 +100,7 @@ from os.path import expanduser
 # c.NotebookApp.browser = ''
 
 ## The full path to an SSL/TLS certificate file.
-c.NotebookApp.certfile = expanduser("~/.jupyter/mycert.pem")
+c.ServerApp.certfile = expanduser("~/.jupyter/mycert.pem")
 
 ## The full path to a certificate authority certificate for SSL/TLS client
 #  authentication.
@@ -221,7 +221,7 @@ c.NotebookApp.certfile = expanduser("~/.jupyter/mycert.pem")
 # c.NotebookApp.kernel_spec_manager_class = 'jupyter_client.kernelspec.KernelSpecManager'
 
 ## The full path to a private key file for usage with SSL/TLS.
-c.NotebookApp.keyfile = expanduser("~/.jupyter/mykey.key")
+c.ServerApp.keyfile = expanduser("~/.jupyter/mykey.key")
 
 ## Hostnames to allow as local when allow_remote_access is False.
 #
@@ -290,7 +290,7 @@ c.NotebookApp.open_browser = False
 # c.NotebookApp.password_required = False
 
 ## The port the notebook server will listen on.
-c.NotebookApp.port = 31897
+c.ServerApp.port = 31897
 
 ## The number of additional ports to try if the specified port is not available.
 # c.NotebookApp.port_retries = 50

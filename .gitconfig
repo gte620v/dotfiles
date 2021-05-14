@@ -7,6 +7,7 @@
 	default = simple
 [core]
 	editor = vim
+	excludesfile = /Users/bob/.global_ignore
 [color]
 	ui = true
 [alias]

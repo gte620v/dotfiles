@@ -21,3 +21,8 @@ ipython-profile-default/.ropeproject/
 .config/nvim/.netrwhist
 .config/nvim/autoload/plug.vim.old
 .config/gtk-2.0/
+
+.jupyter/mycert.pem
+.jupyter/mykey.key
+.jupyter/lab/workspaces/
+.jupyter/migrated
